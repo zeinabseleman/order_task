@@ -31,23 +31,17 @@ class _ScreenMainWidgetState extends State<ScreenMainWidget> {
         backgroundColor: AppColors.backgroundColor,
         body: Padding(
           padding: EdgeInsetsDirectional.only(top: 20.h,start: 15.w,end: 15.w),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-               CustomAppBar(
-                location: widget.text
-              ),
-              SizedBox(height: 20.h,),
-              // SizedBox(
-              //
-              //   height: size.height -
-              //       104.h -
-              //       kBottomNavigationBarHeight -
-              //       MediaQuery.of(context).padding.top,
-              //   child: SingleChildScrollView(child: widget.child),
-              // )
-              SingleChildScrollView(child: widget.child),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                 CustomAppBar(
+                  location: widget.text
+                ),
+                SizedBox(height: 20.h,),
+                widget.child
+              ],
+            ),
           ),
         ),
       ),

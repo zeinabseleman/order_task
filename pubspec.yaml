@@ -37,6 +37,8 @@ dependencies:
   flutter_screenutil: ^5.5.3+1
   persistent_bottom_nav_bar: any
   get: ^4.6.5
+  device_preview: ^1.1.0
+
 
 dev_dependencies:
   flutter_test:

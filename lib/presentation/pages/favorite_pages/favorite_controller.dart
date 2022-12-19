@@ -1,19 +1,20 @@
+import 'package:apptask/presentation/pages/favorite_pages/favorite_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class FavoriteController extends GetxController{
   var numberOfList = 0.obs;
-  var favList=[].obs;
-  List<int> selectedFav=[];
+  var favList=<FavoriteModel>[].obs;
+  List<FavoriteModel> favListModel=[];
 
-  void addFavItem(Widget product,int index){
-    if(!favList.contains(product)){
-      favList.add(product);
+  void addFavItem(FavoriteModel favoriteModel){
+    if(!favList.contains(favoriteModel)){
+      favList.add(favoriteModel);
       numberOfList++;
-      selectedFav.add(index);
     }else{
       print('product already exist');
     }
+    update();
   }
 
 }

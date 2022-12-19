@@ -6,8 +6,11 @@ class FavItem extends StatelessWidget {
 final Color categoryColor;
 final String? image;
 final Function()? onTap;
+final double? width;
+final double? height;
 
-  const FavItem({super.key,this.onTap,
+
+  const FavItem({super.key,this.onTap,this.height,this.width,
 required this.categoryColor,this.image});
 
   @override
@@ -39,7 +42,7 @@ required this.categoryColor,this.image});
                 child: Center(
                   child: Image.asset(
                     image!,
-                    height: 8.h,width: 9.w,
+                    height: height,width: width,
                   ),
                 ),
               ),

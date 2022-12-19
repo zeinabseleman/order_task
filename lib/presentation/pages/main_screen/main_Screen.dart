@@ -24,7 +24,7 @@ class _MainScreenState extends State<MainScreen> {
       const GroceryScreen(),
       const NewsScreen(),
       const PriceScreen(),
-      const FavoriteScreen(),
+       const FavoriteScreen(),
       CartScreen()
 
     ];
@@ -51,6 +51,7 @@ class _MainScreenState extends State<MainScreen> {
                     : AppColors.borderColor),
             title: 'Grocery'),
         PersistentBottomNavBarItem(
+
             activeColorPrimary: AppColors.primaryColor,
             icon: Image.asset('assets/icons/new.png',
                 color: (currentIndex == 1)
@@ -72,8 +73,9 @@ class _MainScreenState extends State<MainScreen> {
                     : AppColors.borderColor),
             title: 'Favorites'),
         PersistentBottomNavBarItem(
+
           activeColorPrimary: AppColors.primaryColor,
-          icon:Image.asset('assets/icons/new.png',
+          icon:Image.asset('assets/icons/carticon.png',width: 22.w,height: 17.h,
               color: (currentIndex == 4)
                   ? AppColors.primaryColor
                   : AppColors.borderColor),
